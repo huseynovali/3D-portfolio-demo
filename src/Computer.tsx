@@ -1,4 +1,5 @@
 import { useGLTF, useTexture } from "@react-three/drei";
+import * as THREE from 'three';
 
 export function Computer(props:any) {
   const { nodes, materials } = useGLTF(
@@ -22,27 +23,27 @@ export function Computer(props:any) {
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-1.145, -2.841, -1.506]} scale={[1, 1, 0.876]}>
             <mesh
-              geometry={nodes.Object_4.geometry }
+              geometry={(nodes.Object_4 as THREE.Mesh).geometry}
               material={materials["Material.003"]}
             />
             <mesh
-              geometry={nodes.Object_5.geometry}
+              geometry={(nodes.Object_5 as THREE.Mesh).geometry }
               material={materials.Plastic}
             />
           </group>
           <group position={[-0.913, 0.552, -1.553]} scale={[0.523, 0.1, 0.339]}>
             <mesh
-              geometry={nodes.Object_7.geometry}
+              geometry={(nodes.Object_7 as THREE.Mesh).geometry }
               material={materials["7355608"]}
             >
               <meshMatcapMaterial map={monitorTrexture} />
             </mesh>
             <mesh
-              geometry={nodes.Object_8.geometry}
+              geometry={(nodes.Object_8 as THREE.Mesh).geometry }
               material={materials.black}
             />
             <mesh
-              geometry={nodes.Object_9.geometry}
+              geometry={(nodes.Object_9 as THREE.Mesh).geometry }
               material={materials.blue_light}
             />
           </group>
@@ -53,11 +54,11 @@ export function Computer(props:any) {
             scale={[-1.405, 0.024, 0.421]}
           >
             <mesh
-              geometry={nodes.Object_11.geometry}
+              geometry={(nodes.Object_11 as THREE.Mesh).geometry }
               material={materials.blue_light}
             />
             <mesh
-              geometry={nodes.Object_12.geometry}
+              geometry={(nodes.Object_12 as THREE.Mesh).geometry }
               material={materials.black}
             />
           </group>
@@ -66,25 +67,25 @@ export function Computer(props:any) {
             scale={[0.114, 0.107, 0.204]}
           >
             <mesh
-              geometry={nodes.Object_14.geometry}
+              geometry={(nodes.Object_14 as THREE.Mesh).geometry }
               material={materials.black}
             />
             <mesh
-              geometry={nodes.Object_15.geometry}
+              geometry={(nodes.Object_15 as THREE.Mesh).geometry }
               material={materials.blue_light}
             />
           </group>
           <group position={[-2.962, 1.463, -1.59]} scale={[0.438, 1, 1.09]}>
             <mesh
-              geometry={nodes.Object_17.geometry}
+              geometry={(nodes.Object_17 as THREE.Mesh).geometry }
               material={materials.black}
             />
             <mesh
-              geometry={nodes.Object_18.geometry}
+              geometry={(nodes.Object_18 as THREE.Mesh).geometry }
               material={materials.blue_light}
             />
             <mesh
-              geometry={nodes.Object_19.geometry}
+              geometry={(nodes.Object_19 as THREE.Mesh).geometry }
               material={materials.Plastic}
             />
           </group>
@@ -94,21 +95,21 @@ export function Computer(props:any) {
             scale={[-0.235, 0.037, 0.235]}
           >
             <mesh
-              geometry={nodes.Object_21.geometry}
+              geometry={(nodes.Object_21 as THREE.Mesh).geometry }
               material={materials.black}
             />
             <mesh
-              geometry={nodes.Object_22.geometry}
+              geometry={(nodes.Object_22 as THREE.Mesh).geometry }
               material={materials.blue}
             />
           </group>
           <group position={[0.71, 0.474, -0.754]} scale={0.576}>
             <mesh
-              geometry={nodes.Object_24.geometry}
+              geometry={(nodes.Object_24 as THREE.Mesh).geometry }
               material={materials.Plastic}
             />
             <mesh
-              geometry={nodes.Object_25.geometry}
+              geometry={(nodes.Object_25 as THREE.Mesh).geometry }
               material={materials.blue_light}
             />
           </group>

@@ -1,4 +1,4 @@
-export const calculateSizes = (isSmall, isMobile, isTablet) => {
+export const calculateSizes = (isSmall: boolean, isMobile: boolean, isTablet: boolean) => {
     
     return {
       deskScale: isSmall ? 0.5 : isMobile ? 0.6 : 0.65,

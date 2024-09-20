@@ -38,14 +38,14 @@ function App() {
               <group>
                 <ReactLogo
                   scale={2}
-                  position={size.reactLogoPosition}
+                  position={size.reactLogoPosition as [number, number, number]}
                   rotation={[0, 0, 0]}
                 />
               </group>
               <group>
                 <JsLogo
                   scale={2}
-                  position={size.jsLogoPosition}
+                  position={size.jsLogoPosition as [number, number, number]}
                   rotation={[0, 0, 0]}
                 />
               </group>
