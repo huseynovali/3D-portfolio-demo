@@ -1,10 +1,8 @@
-import React, { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import CanvasLoader from "./CanvasLoader";
+import { PerspectiveCamera } from "@react-three/drei";
 import { Computer } from "./Computer";
 import HeroCamera from "./HeroCamera";
-import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "./services";
 import { ReactLogo } from "./ReactLogo";
@@ -15,7 +13,7 @@ function App() {
   const isTablet = useMediaQuery({ query: "(max-width: 992px)" });
   const isSmall = useMediaQuery({ query: "(max-width: 300px)" });
   const size = calculateSizes(isSmall, isMobile, isTablet);
-  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <div className="w-full text-center py-5">
@@ -24,7 +22,7 @@ function App() {
         </p>
       </div>
       <div style={{ width: "100%", height: "80vh" }}>
-        <Suspense fallback={<CanvasLoader />}>
+        <Suspense>
           <Canvas>
             <PerspectiveCamera makeDefault position={[0, 0, -50]} />
             {/* <OrbitControls /> */}
@@ -38,7 +36,7 @@ function App() {
                 rotation={[0, 0, 0]}
               />
               <group>
-                <ReactLogo 
+                <ReactLogo
                   scale={2}
                   position={size.reactLogoPosition}
                   rotation={[0, 0, 0]}

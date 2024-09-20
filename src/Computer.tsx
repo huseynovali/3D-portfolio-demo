@@ -1,16 +1,14 @@
-import React, { useRef } from "react";
-import { Html, useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 
-export function Computer(props) {
+export function Computer(props:any) {
   const { nodes, materials } = useGLTF(
     "/public/models/low_poly_gaming_desk.glb"
   );
 
   const monitorTrexture = useTexture("/public/textures/monitor.PNG");
-  const carpetTexture = useTexture("/public/textures/carpet.jpg");  
+  const carpetTexture = useTexture("/public/textures/carpet.jpg");
   return (
     <group {...props} dispose={null}>
-
       <pointLight position={[0, 1, 2]} intensity={100} />
       <pointLight position={[0, -5, 2]} intensity={100} />
 
@@ -24,7 +22,7 @@ export function Computer(props) {
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-1.145, -2.841, -1.506]} scale={[1, 1, 0.876]}>
             <mesh
-              geometry={nodes.Object_4.geometry}
+              geometry={nodes.Object_4.geometry }
               material={materials["Material.003"]}
             />
             <mesh
@@ -48,7 +46,7 @@ export function Computer(props) {
               material={materials.blue_light}
             />
           </group>
-      
+
           <group
             position={[-0.899, 0.474, -0.429]}
             rotation={[0, 0, -Math.PI]}
