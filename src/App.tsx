@@ -21,7 +21,14 @@ function App() {
           Hi, I am Ali <span className="waving-hand">👋</span>
         </p>
       </div>
-      <div style={{ width: "100%", height: "80vh" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "80vh",
+          position: "sticky",
+ 
+        }}
+      >
         <Suspense>
           <Canvas>
             <PerspectiveCamera makeDefault position={[0, 0, -50]} />
@@ -52,6 +59,7 @@ function App() {
             </HeroCamera>
           </Canvas>
         </Suspense>
+        <div className="h-screen relative flex justify-center items-center bg-green-100 z-40 ">asdasd</div>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ export function ReactLogo(
       dispose?: (() => void) | null;
     } & EventHandlers
 ) {
-  const { nodes, materials } = useGLTF("/public/models/react_logo.glb");
+  const { nodes, materials } = useGLTF("/models/react_logo.glb");
   const targetRef = useRef<THREE.Mesh>(null);
 
   useGSAP(() => {
@@ -77,4 +77,4 @@ export function ReactLogo(
   );
 }
 
-useGLTF.preload("/public/models/react_logo.glb");
+useGLTF.preload("/models/react_logo.glb");

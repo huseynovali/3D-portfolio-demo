@@ -3,11 +3,11 @@ import * as THREE from 'three';
 
 export function Computer(props:any) {
   const { nodes, materials } = useGLTF(
-    "/public/models/low_poly_gaming_desk.glb"
+    "/models/low_poly_gaming_desk.glb"
   );
 
-  const monitorTrexture = useTexture("/public/textures/monitor.PNG");
-  const carpetTexture = useTexture("/public/textures/carpet.jpg");
+  const monitorTrexture = useTexture("/textures/monitor.PNG");
+  const carpetTexture = useTexture("/textures/carpet.jpg");
   return (
     <group {...props} dispose={null}>
       <pointLight position={[0, 1, 2]} intensity={100} />
@@ -119,4 +119,4 @@ export function Computer(props:any) {
   );
 }
 
-useGLTF.preload("/public/models/low_poly_gaming_desk.glb");
+useGLTF.preload("/models/low_poly_gaming_desk.glb");

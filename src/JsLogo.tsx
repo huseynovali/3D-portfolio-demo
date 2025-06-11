@@ -9,7 +9,7 @@ import { JSX } from "react/jsx-runtime";
 
 export function JsLogo(props: JSX.IntrinsicAttributes & Omit<ExtendedColors<Overwrite<Partial<THREE.Group<THREE.Object3DEventMap>>, NodeProps<THREE.Group<THREE.Object3DEventMap>, typeof THREE.Group>>>, NonFunctionKeys<{ position?: Vector3; up?: Vector3; scale?: Vector3; rotation?: Euler; matrix?: Matrix4; quaternion?: Quaternion; layers?: Layers; dispose?: (() => void) | null; }>> & { position?: Vector3; up?: Vector3; scale?: Vector3; rotation?: Euler; matrix?: Matrix4; quaternion?: Quaternion; layers?: Layers; dispose?: (() => void) | null; } & EventHandlers) {
   const { nodes, materials } = useGLTF(
-    "/public/models/logotipos_3d_-_aprenda_programar.glb"
+    "/models/logotipos_3d_-_aprenda_programar.glb"
   );
   const targetRef = useRef<THREE.Mesh>(null);
 
@@ -36,4 +36,4 @@ export function JsLogo(props: JSX.IntrinsicAttributes & Omit<ExtendedColors<Over
   );
 }
 
-useGLTF.preload("/public/models/logotipos_3d_-_aprenda_programar.glb");
+useGLTF.preload("/models/logotipos_3d_-_aprenda_programar.glb");
